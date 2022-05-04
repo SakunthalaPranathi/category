@@ -1,0 +1,48 @@
+﻿@model IEnumerable<cateringdemosample.Models.EcomCategory>
+
+@{
+    ViewData["Title"] = "GetCategories";
+}
+
+@*<p>
+        <a asp-action="Create">Create New</a>
+    </p>*@
+<h1>GetCategories</h1>
+@TempData["food"]
+<table class="table">
+    <!--<thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(Model => Model.name)
+            </th>-->
+    @*<th>
+            @Html.DisplayNameFor(Model => Model.desc)
+        </th>*@
+    @*<th>
+            @Html.DisplayNameFor(Model => Model.photopath)
+        </th>*@
+    <!--</tr>
+    </thead>-->
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    <a href="@Url.Action("FoodList")?id=@item.id">  @Html.DisplayFor(modelItem => item.name)</a>
+                </td>
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.desc)
+                    </td>*@
+                @*<td>
+                        @Html.DisplayFor(modelItem => item.photopath)
+                    </td>*@
+
+                @*<td>
+                        <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                        <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                        <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+                    </td>*@
+            </tr>
+        }
+    </tbody>
+</table>

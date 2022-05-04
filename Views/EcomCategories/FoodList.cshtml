@@ -1,0 +1,71 @@
+﻿@model IEnumerable<cateringdemosample.Models.Food>
+
+@{
+    ViewData["Title"] = "FoodList";
+}
+
+<h1>FoodList</h1>
+
+@*<p>
+    <a asp-action="Create">Create New</a>
+</p>*@
+@using (Html.BeginForm())
+{
+<div class="row">
+    <div class="col-md-6">
+        @Html.EditorForModel()
+        <!--<table class="table table-striped">-->
+            
+            @*<thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.categ)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.desc)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.photopath)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.check)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>*@
+            <!--<tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.name)
+                            @Html.HiddenFor(e=>item.id)
+                        </td>-->
+                        @*<td>
+                            @Html.DisplayFor(modelItem => item.categ.id)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.desc)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.photopath)
+                        </td>*@
+                        <!--<td>
+                            @Html.CheckBoxFor(modelItem => item.check)
+                        </td>-->
+                        @*<td>
+                            <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                            <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                            <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+                        </td>*@
+                   --></tr>
+                }
+            </tbody>
+        </table>-->
+    </div> 
+</div>
+<input type="submit" value="submit"/>
+}
